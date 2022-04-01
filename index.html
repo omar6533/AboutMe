@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Refal CV</title>
+</head>
+<body >
+    <style>
+
+        /* Designed By circuit Overtime */
+        body
+        {
+            margin: 60px;
+            background-color: 	#87CEEB;
+            height: 1350px;
+            overflow-x: hidden;
+        }
+        
+        .main
+        {
+            position: absolute;
+            left: 70%;
+            transform: translateX(-70%);	
+            height: 1200px;
+            width: 	600px;
+            background: #fff;
+        }
+        .sub
+        {
+            position: absolute;
+            left: -55%;
+            height: 1200px;
+            width: 350px;
+            background-color: #013048;
+        }
+        .contacts
+        {
+            position: absolute;
+            top: 3%;
+            left: 20%;
+            height: 200px;
+            width: 200px;
+            background-size: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            
+        
+        }
+        
+        /* Contact photo case starts here */
+        
+        .profile-pic-div{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 13%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            overflow: hidden;
+            transition: 1s;
+            border: 5px solid #fff;
+            margin: 2px;
+            filter: drop-shadow(0 50px 40px #111);
+        }
+        
+        #photo{
+            height: 100%;
+            width: 100%;
+        }
+        
+        #file{
+            display: none;
+        }
+        
+        #uploadBtn{
+            height: 40px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: wheat;
+            line-height: 30px;
+            font-family: sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            display: none;
+            transition: 1s;
+            font-weight: bold;
+        }
+        /* Contact photo case ends here */
+        .name
+        {
+            position: absolute;
+            color: #fff;
+            font-size: 24px;
+            top: 23%;
+            left: 19%;
+            text-transform: uppercase;
+            font-family: monospace;
+            justify-content: center;
+            align-items: center;
+        
+        
+        }
+        .desig
+        {
+        
+            position: absolute;
+            color: #BFFF00;
+            font-size: 16px;
+            top: 28%;
+            left: 32%;
+            text-transform: uppercase;
+            font-family: monospace;
+            align-items: center;
+            justify-content: center;
+        
+        }
+         hr
+         {
+             position: relative;
+             top: 35%;
+             width: 215px;
+         }
+         h3
+         {
+             position: absolute;
+             top: 36%;
+             left: 19%;
+             font-size: 24px;
+             text-transform: uppercase;
+             
+             color: #00FFFF;
+             text-align: left;
+             font-family: monospace;
+        
+         }
+         .callout
+         {
+             position: absolute;
+             top: 40%;
+             margin: 50px;
+             color: #ffe100;
+             font-size: 20px;
+         }
+         .text
+         {
+             position: relative;
+             left: 10%;
+             color: #fff;
+             text-align: justify;
+         }
+         .eduSection
+         {
+             position: absolute;
+             top: 60%;
+        
+         }
+         .yearone
+        {
+            position: absolute;
+            top: 65%;
+            left: 20%;
+            color: #d980f7;
+        
+        }
+        .whatone
+        {
+            position: absolute;
+            top: 69%;
+            left: 20%;
+            color: #fff;
+        
+        }
+        .uniNameone
+        {
+            position: absolute;
+            top: 71%;
+            color: #888;
+            left: 20%;
+        }
+        
+        
+         .yeartwo
+        {
+            position: absolute;
+            top: 73%;
+            left: 20%;
+            color: #d980f7;
+        
+        }
+        .whattwo
+        {
+            position: absolute;
+            top: 77%;
+            left: 20%;
+            color: #fff;
+        
+        }
+        .uniNametwo
+        {
+            position: absolute;
+            top: 79%;
+            color: #888;
+            left: 20%;
+        }
+        
+        
+         .yearthree
+        {
+            position: absolute;
+            top: 81%;
+            left: 20%;
+            color: #d980f7;
+        
+        }
+        .whatthree
+        {
+            position: absolute;
+            top: 85%;
+            left: 20%;
+            color: #fff;
+        
+        }
+        .uniNamethree
+        {
+            position: absolute;
+            top: 87%;
+            color: #888;
+            left: 20%;
+        }
+        
+        .language
+        {
+            position: absolute;
+            top: 90%;
+            font-size: 24px;
+             text-transform: uppercase;
+             font-weight: bold;
+             left: -13%;
+             width:  600px;
+             color: #00FFFF;
+             text-align: center;
+             font-family: monospace;
+        
+        }
+        .whatLanguage
+        {
+            position: relative;
+            top: 30px;
+            left: -135px;
+            font-size: 15px;
+            color: #09a8f7;
+            text-align: justify;
+            margin-right: 5px;
+            column-span: 1;
+        }
+        .whatLanguagefrench
+        {
+            position: relative;
+            top: 30px;
+            left: -112px;
+            font-size: 15px;
+            color: #09a8f7;
+            text-align: justify;
+            margin-right: 5px;
+            column-span: 1;
+        }
+        
+        /* Sub ends here */
+        
+        .profile
+        
+        {
+            position: absolute;
+            left: 10%;
+            text-transform: uppercase;
+            color: #013048;
+        }
+        .profileName
+        {
+            position: absolute;
+            left: 10%;
+            top: 5%;
+            width: 490px;
+            text-align: justify;
+            color: #555;
+        }
+        .profile
+        
+        {
+            position: absolute;
+            left: 10%;
+            text-transform: uppercase;
+            color: #013048;
+        }
+        .experience
+        {
+            position: absolute;
+            left: 10%;
+            top: 25%;
+            width: 490px;
+            text-align: justify;
+            color: #013048;
+            text-transform: uppercase;
+        
+        
+        }
+        
+        
+        .experienceinfo
+        {
+            position: absolute;
+            top: 34%;
+            left: 10%;
+        
+        }
+        .experienceinfo .yearspanone
+        {
+            color: #1798d8;
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+        
+        
+        }
+        .companyone
+        {
+            position: relative;
+          color: #1798d8;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .designationone
+        {
+            position: relative;
+            left: 10%;
+            color: #c91050;
+            font-size: 15px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .designationtwo
+        {
+            position: relative;
+            left: 23%;
+            color: #c91050;
+            font-size: 15px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .defione
+        {
+            position: relative;
+            left: 50%;
+            width: 330px;
+            text-align: justify;
+            margin-right: 20px;
+            color: #555;
+        }
+        
+        .skill
+        {
+            position: relative;
+            left: 10%;
+            top: 62%;
+            text-transform: uppercase;
+            font-family: monospace;
+            color: #013048;
+        
+        }
+        .professionalSkills
+        {
+            position: absolute;
+            top: 72%;
+            left: 10%;
+        }
+        
+        
+        
+        .html
+        {
+            position: absolute;
+            width: 450px;
+            background-color: #d0e0e0;
+            border-radius: 20px;
+            height: 10px;
+            overflow: hidden;
+        }
+        .htmlprogress
+        {
+            position: relative;
+            width: 400px;
+            background: #01A8FB;
+            border-radius: 20px;
+            height: 10px;
+            animation: animatehtml 2s linear forwards;
+        }
+        .htmlname
+        {
+            position: relative;
+            left: 470px;
+            top: -5px;
+            color: #013048;
+            font-weight: bold;
+        }
+        
+        .css
+        {
+            position: absolute;
+            width: 450px;
+            margin-top: 20px;
+            background-color: #d0e0e0;
+            border-radius: 20px;
+            height: 10px;
+                
+            overflow: hidden
+        }
+        .cssprogress
+        {
+            position: relative;
+            width: 440px;
+            background: #01A8FB;
+            border-radius: 20px;
+            height: 10px;
+            animation: animatecss 2s linear forwards;
+        }
+        .cssname
+        {
+             position: relative;
+             left: 420px;
+             top: 33px;
+             color: #013048;
+            font-weight: bold;
+        }
+        
+        
+        .cplusplus
+        {
+            position: absolute;
+            top: 60px;
+            width: 450px;
+            margin-top: 20px;
+            background-color: #d0e0e0;
+            border-radius: 20px;
+            height: 10px;
+                
+            overflow: hidden
+        }
+        .cplusplusprogress
+        {
+            position: relative;
+            width: 320px;
+            background: #01A8FB;
+            border-radius: 20px;
+            height: 10px;
+            animation: animatec 2s linear forwards;
+        }
+        .cplusplusname
+        {
+                position: relative;
+             left: 390px;
+             top: 75px;
+             color: #013048;
+            font-weight: bold;
+        }
+        
+        .python
+        {
+            position: absolute;
+            top: 100px;
+            width: 450px;
+            margin-top: 20px;
+            background-color: #d0e0e0;
+            border-radius: 20px;
+            height: 10px;
+                
+            overflow: hidden
+        }
+        .pythonprogress
+        {
+            position: relative;
+            width: 220px;
+            background: #01A8FB;
+            border-radius: 20px;
+            height: 10px;
+            animation: animatepython 2s linear forwards;
+        }
+        .pythonname
+        {
+              position: relative;
+             left: 355px;
+             top: 115px;
+             color: #013048;
+            font-weight: bold;
+        }
+        .java
+        {
+            position: absolute;
+            top: 140px;
+            width: 450px;
+            margin-top: 20px;
+            background-color: #d0e0e0; 
+            border-radius: 20px;
+            height: 10px;
+                
+            overflow: hidden
+        }
+        .javaprogress
+        {
+            position: relative;
+            width: 430px;
+            background:#01A8FB;
+            border-radius: 20px;
+            height: 10px;
+            animation: animatejava 2s linear forwards;
+        }
+        .javaname
+        {
+            position: relative;
+             left: 300px;
+             top: 155px;
+             color: #013048;
+            font-weight: bold;
+        }
+        @keyframes animatehtml 
+        {
+            0%
+            {
+                width: 0px;
+                filter: hue-rotate(360deg);
+            }
+            100%
+            {
+                width: 400px;
+            }
+        }
+        
+        @keyframes animatecss
+        {
+            0%
+            {
+                width: 0px;
+                filter: hue-rotate(360deg);
+            }
+            100%
+            {
+                width: 440px;
+            }
+        }
+        
+        @keyframes animatec
+        {
+            0%
+            {
+                width: 0px;
+                filter: hue-rotate(360deg);
+            }
+            100%
+            {
+                width: 320px;
+            }
+        }
+        
+        @keyframes animatepython 
+        {
+            0%
+            {
+                width: 0px;
+                filter: hue-rotate(360deg);
+            }
+            100%
+            {
+                width: 220px;
+            }
+        }
+        
+        @keyframes animatejava 
+        {
+            0%
+            {
+                width: 0px;
+                filter: hue-rotate(360deg);
+            }
+            100%
+            {
+                width: 430px;
+            }
+        }
+        .interest
+        {
+            position: absolute;
+            top: 90%;
+            left: 10%;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #013048;
+            width: 1000px;
+            font-weight: bold;
+            font-family: monospace;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        .whatInterest
+        {
+            position: relative;
+            top: 30px;
+            left: -114px;
+            font-size: 15px;
+            color: #09a8f7;
+            text-align: justify;
+            margin-right: 30px;
+        
+        }
+        
+        /* Designed By circuit Overtime */
+        
+            </style>
+        <!-- Designed By Circuit Overtime -->
+            <title>Resume Design</title>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        </head>
+        <body>
+           <div class="main">
+                <div class="sub">
+                    <!--<div class="change">
+                      <img src="image.jpg" class="contacts">
+                      <input type="file" id="file">
+                      <div class="buttonwrap">
+                      <label for="file"  id="uploadBtn">Choose Picture</label>
+                    </div>
+                 </div>-->
+                 <div class="profile-pic-div">
+          <img src="image.jpg" id="photo">
+          <input type="file" id="file">
+          <label for="file" id="uploadBtn">Upload Photo</label>
+        </div>
+                      <h5 class="name"> REFAL ALQASEM </h5>
+                      <h5 class="desig"> Student </h5>
+                      <hr>
+                      <h3> Contact Info </h3>
+                       <div class="callout">
+                            <i class="fa fa-phone"></i>
+                            <span class="text">0564444184 </span>
+                            <br>
+                            <br>
+                            <i class="fa fa-envelope-open"></i>
+                            <span class="text"> refaalqassim@gmail.com </span>
+                            <br>
+                            <br>
+                            
+                        </div>
+           
+                    <div class="education">
+                        <h3 class="eduSection"> Education </h3>
+        
+                        <p class="yearone">2019 - 2023</p>
+                        <span class="whatone">Bachaelor Degree in Computer Science</span>
+                            <span class="uniNameone"> Prince Sultan University </span>
+        
+        
+                         
+                        </div>
+                        <div class="language">
+                            <span class="languagesKnown"> Languages </span>
+                        <span class="whatLanguage"> <i class="fa fa-globe
+                            "></i> English </span>
+                            <span class="whatLanguage"> <i class="fa fa-globe
+                            "></i> Arabic </span>
+                           
+        
+                        </div>
+        
+                    </div>
+        
+                    <h2 class="profile"> Profile </h2>
+                    <p class="profileName"> I am a sophmore computer sicne student in the sconde year. 
+                    <br>
+                    <br>
+                   I like to attend recent confrenses and workshops in my fields.  
+                    <br>
+                    <br>
+                  
+                </p>
+        
+                    <br>
+                    <br>
+                    <br>
+                    <h2 class="experience">Experience</h2>
+                    <div class="experienceinfo">
+                    
+                    <span class="yearspanone"> Present </span>
+                    <span class="designationone"> Baims Ambassador </span>
+                    <p class="defione"> Baims is a platform that provides Students with useful videos and lessons. I was chosen to represent them at my University.
+                    </p>
+        
+                    <span class="yearspanone"> Prsent </span>
+                    <span class="designationtwo"> Free lancer </span>
+                    <p class="defione"> I run and manage my own business <a style="text-decoration: none; " href="https://instagram.com/ramn_flower?utm_medium=copy_link"> Ramn Flower</a>. Which requires a good desings skills, Professional Communication Skills 
+                     and handling high pressure. 
+                    </p>
+        
+                   
+                </div>
+              <h2 class="skill"> Professional Skills </h2>
+                <div class="professionalSkills"> 
+        
+        
+                    <div class="java">
+                        <div class="javaprogress"></div>
+                    </div>
+                    <span class="javaname"> Java </span>
+                </div>
+                <div class="interest">
+              <span class="interestname"> Interests </span>
+                    
+                    <span class="whatInterest">  <i class="fa fa-gamepad"></i> Gaming</span>
+                    <span class="whatInterest">  <i class="fa fa-book"></i> Reading</span>
+                    <span class="whatInterest"> <i class="fa fa-microphone"></i> Singing</span>
+                <span class="whatInterest"> <i class="fa fa-pencil"></i> Writing</span>	
+                </div>
+        
+               </div>
+        <!-- Designed By Circuit Overtime -->
+               <script type="text/javascript">
+        //designed by Circuit Overtime
+                   //declearing html elements
+        
+        const imgDiv = document.querySelector('.profile-pic-div');
+        const img = document.querySelector('#photo');
+        const file = document.querySelector('#file');
+        const uploadBtn = document.querySelector('#uploadBtn');
+        
+        //if user hover on img div 
+        
+        imgDiv.addEventListener('mouseenter', function(){
+            uploadBtn.style.display = "block";
+        });
+        
+        //if we hover out from img div
+        
+        imgDiv.addEventListener('mouseleave', function(){
+            uploadBtn.style.display = "none";
+        });
+        
+        //lets work for image showing functionality when we choose an image to upload
+        
+        //when we choose a photo to upload
+        
+        file.addEventListener('change', function(){
+            //this refers to file
+            const choosedFile = this.files[0];
+        
+            if (choosedFile) {
+        
+                const reader = new FileReader(); //FileReader is a predefined function of JS
+        
+                reader.addEventListener('load', function(){
+                    img.setAttribute('src', reader.result);
+                });
+        
+                reader.readAsDataURL(choosedFile);
+        
+        
+            }
+        });
+        // Designed by Circuit Overtime
+   
+</body>
+</html>
